@@ -1,8 +1,10 @@
 package com.example.vehicleservice.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import com.example.vehicleservice.entity.User;
 import com.example.vehicleservice.service.UserService;
 
@@ -14,11 +16,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    // Register User
     @PostMapping("/register")
     public User registerUser(@RequestBody User user) {
         return userService.registerUser(user);
     }
 
+    // Get All Users
     @GetMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();

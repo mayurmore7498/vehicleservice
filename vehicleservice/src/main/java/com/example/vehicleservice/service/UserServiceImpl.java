@@ -11,17 +11,16 @@ import com.example.vehicleservice.repository.UserRepository;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	private UserRepository userRepository;
-	
-	@Override
-	public User registerUser(User user) {
-		return userRepository.save(user);
-		
-	}
-	
-	@Override
-	public List<User>getAllUsers(){
-		return userRepository.findAll();
-	}
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public User registerUser(User user) {
+        return userRepository.save(user);
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 }
