@@ -1,0 +1,13 @@
+package com.example.vehicleservice.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.vehicleservice.entity.Vehicle;
+
+public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
+
+    List<Vehicle> findByUserUserId(Long userId);
+
+}

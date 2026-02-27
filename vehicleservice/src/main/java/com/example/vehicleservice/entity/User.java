@@ -8,17 +8,17 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userID;
+    private Long userId;
 
     private String name;
     private String email;
     private String phone;
     private String password;
-	public Long getUserID() {
-		return userID;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setUserID(Long userID) {
-		this.userID = userID;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public String getName() {
 		return name;

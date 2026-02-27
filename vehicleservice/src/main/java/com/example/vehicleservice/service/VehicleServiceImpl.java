@@ -1,0 +1,28 @@
+package com.example.vehicleservice.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.vehicleservice.entity.Vehicle;
+import com.example.vehicleservice.repository.VehicleRepository;
+
+@Service
+public class VehicleServiceImpl implements VehicleService {
+
+    private final VehicleRepository vehicleRepository;
+
+    public VehicleServiceImpl(VehicleRepository vehicleRepository) {
+        this.vehicleRepository = vehicleRepository;
+    }
+
+    @Override
+    public Vehicle addVehicle(Vehicle vehicle) {
+        return vehicleRepository.save(vehicle);
+    }
+
+    @Override
+    public List<Vehicle> getVehiclesByUser(Long userId) {
+        return vehicleRepository.findByUserUserId(userId);
+    }
+}
